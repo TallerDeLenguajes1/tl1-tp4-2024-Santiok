@@ -1,0 +1,106 @@
+# Creado por https://www.toptal.com/developers/gitignore/api/c,c++,visualstudiocode,executable
+# Editar en https://www.toptal.com/developers/gitignore?templates=c,c++,visualstudiocode,executable
+
+### C ###
+# Requisitos previos
+*.d
+
+# Archivos de objetos
+*.o
+*.ko
+*.obj
+*.duende
+
+# Salida del enlazador
+*.ilk
+*.mapa
+*.Exp
+
+# Encabezados precompilados
+*.gch
+*.pch
+
+# Bibliotecas
+*.lib
+*.a
+*.la
+*.lo
+
+# Objetos compartidos (incluidas DLL de Windows)
+*.dll
+*.entonces
+*.entonces.*
+*.dylib
+
+# Ejecutables
+*.exe
+*.afuera
+*.aplicación
+*.i*86
+*.x86_64
+*.maleficio
+
+# Archivos de depuración
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Resultados de compilación del módulo kernel
+*.modificación*
+*.cmd
+.tmp_versiones/
+módulos.orden
+Módulo.symvers
+mkfile.old
+dkms.conf
+
+### C++ ###
+# Requisitos previos
+
+# Archivos de objetos compilados
+*.slo
+
+# Encabezados precompilados
+
+# Bibliotecas dinámicas compiladas
+
+# Archivos del módulo Fortran
+*.modificación
+*.smod
+
+# Bibliotecas estáticas compiladas
+*.lai
+
+# Ejecutables
+
+### Ejecutable ###
+*.murciélago
+*.cgi
+*.com
+*.artilugio
+*.frasco
+*.pif
+*.vb
+*.wsf
+
+### Código VisualStudio ###
+.vscode/*
+!.vscode/configuración.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensiones.json
+!.vscode/*.fragmentos de código
+
+# Historial local para Visual Studio Code
+.historia/
+
+# Extensiones de código de Visual Studio creadas
+*.vsix
+
+### Parche de VisualStudioCode ###
+# Ignorar todo el historial local de archivos
+.historia
+.ionuro
+
+# Fin de https://www.toptal.com/developers/gitignore/api/c,c++,visualstudiocode,executable
