@@ -54,16 +54,17 @@ int main(){
     Nodo *startRealizadas = NULL;
 
     //Creo las tareas.
+    printf("\n----------Voy ingresando las tareas.----------\n");
 
     do
     {
-        Nodo *N;
+        Nodo *newNodo;
 
         //Creo nodo.
-        N = crearNodo(cont);
+        newNodo = crearNodo(cont);
 
         //Inserto nodo.
-        insertarNodo(&startPendientes, N);
+        insertarNodo(&startPendientes, newNodo);
 
         cont++;
 
@@ -73,13 +74,14 @@ int main(){
     } while (opcion == 1);
     
     //Paso las tareas de una lista a otra.
+    printf("\n----------Paso las tareas de una lista a la otra.----------\n");
 
     do
     {
         int aux;
         Nodo *N;
 
-        printf("\n Ingrese el ID de la tarea:");
+        printf("\n Ingrese el ID de la tarea que ya realizo:");
         scanf("%d", &aux);
 
         //Busco la tarea en la lista 1.
@@ -99,8 +101,13 @@ int main(){
 
     //Muestro las listas.
 
-    mostrarLista(startPendientes);
-    mostrarLista(startRealizadas);
+    printf("\n----------Tareas Pendientes.----------\n");
+
+    mostrarLista(&startPendientes);
+
+    printf("\n----------Tareas Realizadas.----------\n");
+
+    mostrarLista(&startRealizadas);
     
     //Buscar las tareas por ID o por palabras claves.
 
@@ -161,9 +168,9 @@ Nodo *crearNodo(int cont){
 
     newNodo->T.tareaID = cont;
 
-    newNodo->T.descripcion = (char*)malloc(sizeof(char));
+    newNodo->T.descripcion = (char*)malloc(TAMA * sizeof(char));
     printf("\nIngrese la descripcion de la tarea: \n");
-    scanf("%s", newNodo->T.descripcion);
+    scanf("%s", &newNodo->T.descripcion);
 
     newNodo->T.duracion = 10 + rand() % 91;
 
@@ -219,7 +226,7 @@ void eliminarNodo(Nodo **start, int dato){
 
 void mostrarLista(Nodo **start){
 
-    Nodo *aux = start;
+    Nodo *aux = *start;
 
     while (aux != NULL)
     {
